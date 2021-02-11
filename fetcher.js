@@ -11,7 +11,6 @@ const fetcher = function (URL, path) {
     console.log("error:", error); // Print the error if one occurred
     console.log("statusCode:", response && response.statusCode); // Print the response status code if a response was received
     let data = body;
-    // console.log("body:", body); // Print the HTML for the Google homepage.
     fs.writeFile(path, data, () => {
       console.log(
         `Downloaded and saved ${fs.statSync(path).size} bytes to ${path}`
